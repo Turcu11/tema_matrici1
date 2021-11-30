@@ -6,8 +6,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             int[,] matrice1 = CreateMatrix();
+            Console.WriteLine("");
             Console.WriteLine("----------------------------");
             PrintMatrix(matrice1);
             Console.WriteLine($"Matrix identity \"{CheckIfMatrixIdentity(matrice1)}\"");
@@ -15,10 +15,11 @@ namespace ConsoleApp1
 
         public static int[,] CreateMatrix ()
         {
-            Console.Write("Introdu numarul de randuri = ");
+            Console.Write("Specify the number of rows = ");
             int randuri = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Introdu numarul de coloane = ");
+            Console.Write("Specify the number of colomns = ");
             int coloane = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
 
             int[,] matrix = new int[randuri, coloane];
             for(int i = 0; i < matrix.GetLength(0); i++)
