@@ -66,7 +66,7 @@ namespace ConsoleApp1
                     }
                     if(i != j && matrix[i, j] == 0)
                     {
-;                       perfectElseWhere = true;
+                        perfectElseWhere = true;
                     }
                 }
             }
