@@ -10,7 +10,7 @@ namespace ConsoleApp1
             int[,] matrice1 = CreateMatrix();
             Console.WriteLine("----------------------------");
             PrintMatrix(matrice1);
-            Console.WriteLine($"Matrix identity {CheckIfMatrixIdentity(matrice1)}");
+            Console.WriteLine($"Matrix identity \"{CheckIfMatrixIdentity(matrice1)}\"");
         }
 
         public static int[,] CreateMatrix ()
@@ -25,6 +25,7 @@ namespace ConsoleApp1
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
+                    Console.Write($"Element of matrix [{i}] [{j}] = ");
                     int element = Convert.ToInt32(Console.ReadLine());
                     matrix[i, j] = element;
                 }
